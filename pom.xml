@@ -6,7 +6,7 @@
   <description>Score Collector to generate score for a dashboard</description>
   <url>https://github.com/Hygieia/${repository.name}</url>
   <packaging>jar</packaging>
-  <version>3.1.0-SNAPSHOT</version>
+  <version>3.1.1-SNAPSHOT</version>
   <groupId>com.capitalone.dashboard</groupId>
   <artifactId>score-collector</artifactId>
 
