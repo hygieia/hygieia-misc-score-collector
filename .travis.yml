@@ -27,3 +27,6 @@ notifications:
     - ragha.vema@capitalone.com
     on_success: always
     on_failure: always
+before_install:
+- openssl aes-256-cbc -K $encrypted_5182c8761ace_key -iv $encrypted_5182c8761ace_iv
+  -in keys.gpg.enc -out keys.gpg -d
