@@ -4,6 +4,7 @@ import java.util.*;
 
 import com.capitalone.dashboard.exception.ThresholdException;
 import com.capitalone.dashboard.model.score.settings.*;
+import com.querydsl.core.BooleanBuilder;
 import org.apache.commons.collections.CollectionUtils;
 import org.joda.time.LocalDate;
 import org.slf4j.Logger;
@@ -21,7 +22,6 @@ import com.capitalone.dashboard.model.*;
 import com.capitalone.dashboard.repository.BuildRepository;
 import com.capitalone.dashboard.repository.ComponentRepository;
 import com.google.common.collect.Lists;
-import com.mysema.query.BooleanBuilder;
 
 /**
  * Service to calculate build widget score

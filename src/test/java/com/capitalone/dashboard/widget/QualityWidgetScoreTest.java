@@ -11,6 +11,7 @@ import java.util.List;
 import com.capitalone.dashboard.Utils;
 import com.capitalone.dashboard.model.score.settings.*;
 import com.capitalone.dashboard.repository.CodeQualityRepository;
+import com.querydsl.core.types.Predicate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -25,7 +26,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.google.common.collect.Lists;
 import com.google.common.io.Resources;
-import com.mysema.query.types.Predicate;
 import org.springframework.data.domain.*;
 
 

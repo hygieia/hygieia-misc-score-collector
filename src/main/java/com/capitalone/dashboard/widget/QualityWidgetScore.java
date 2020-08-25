@@ -6,6 +6,7 @@ import java.util.List;
 import com.capitalone.dashboard.model.score.settings.QualityScoreSettings;
 import com.capitalone.dashboard.model.score.settings.ScoreComponentSettings;
 import com.capitalone.dashboard.model.score.settings.ScoreTypeValue;
+import com.querydsl.core.BooleanBuilder;
 import org.apache.commons.collections.CollectionUtils;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
@@ -24,7 +25,6 @@ import com.capitalone.dashboard.repository.CodeQualityRepository;
 import com.capitalone.dashboard.repository.ComponentRepository;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
-import com.mysema.query.BooleanBuilder;
 
 /**
  * Service to calculate quality widget score
