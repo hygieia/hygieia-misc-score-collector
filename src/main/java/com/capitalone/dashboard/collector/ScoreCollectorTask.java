@@ -101,12 +101,6 @@ public class ScoreCollectorTask extends CollectorTask<ScoreCollector> {
     log("Finished", start);
   }
 
-  @Override
-  public int getCount() {
-    return count.get();
-  }
-
-
   private void collectScoreForApplication(ScoreCollectorItem scoreApplication, ScoreCriteriaSettings scoreCriteriaSettings) {
 
     ScoreMetric scoreMetric = this.applicationScoreService.getScoreForApplication(scoreApplication, scoreCriteriaSettings);
