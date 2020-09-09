@@ -1,8 +1,10 @@
 package com.capitalone.dashboard.collector;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.capitalone.dashboard.ScoreSettingsService;
+import com.capitalone.dashboard.client.RestOperationsSupplier;
 import com.capitalone.dashboard.model.score.ScoreCollectorItem;
 import com.capitalone.dashboard.model.score.ScoreMetric;
 import com.capitalone.dashboard.model.score.ScoreValueType;
@@ -33,6 +35,7 @@ public class ScoreCollectorTask extends CollectorTask<ScoreCollector> {
   private final ScoreCriteriaSettingsRepository scoreCriteriaSettingsRepository;
 
   private final ApplicationScoreService applicationScoreService;
+  private AtomicInteger count = new AtomicInteger(0);
 
   @Autowired
   @SuppressWarnings("PMD.ExcessiveParameterList")
@@ -75,6 +78,7 @@ public class ScoreCollectorTask extends CollectorTask<ScoreCollector> {
   public void collect(ScoreCollector collector) {
 
     logBanner("Score");
+    count.set(0);
 
     long start = System.currentTimeMillis();
 
@@ -92,10 +96,10 @@ public class ScoreCollectorTask extends CollectorTask<ScoreCollector> {
     log("No of dashboards with score widget=" + scoreApplications.size());
     for (ScoreCollectorItem scoreApplication : scoreApplications) {
       collectScoreForApplication(scoreApplication, scoreCriteriaSettings);
+      count.getAndIncrement();
     }
     log("Finished", start);
   }
-
 
   private void collectScoreForApplication(ScoreCollectorItem scoreApplication, ScoreCriteriaSettings scoreCriteriaSettings) {
 

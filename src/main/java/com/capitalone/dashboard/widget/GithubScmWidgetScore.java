@@ -10,7 +10,7 @@ import com.capitalone.dashboard.model.score.settings.*;
 import com.capitalone.dashboard.repository.CommitRepository;
 import com.capitalone.dashboard.repository.ComponentRepository;
 import com.google.common.collect.Lists;
-import com.mysema.query.BooleanBuilder;
+import com.querydsl.core.BooleanBuilder;
 import org.apache.commons.collections.CollectionUtils;
 import org.bson.types.ObjectId;
 import org.joda.time.LocalDate;
